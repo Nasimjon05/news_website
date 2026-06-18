@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Popular News</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" >
+	 <link href="fonts/css/fontawesome.min.css" rel="stylesheet" >
+	<link href="fonts/css/brands.min.css" rel="stylesheet" />
+    <link href="fonts/css/solid.min.css" rel="stylesheet" />
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/news.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+ <section id="top" class="bg-dark pt-3 pb-3">
+   <div class="container-xl">
+     <div class="row top_1">
+	  <div class="col-md-12">
+	    <ul class="mb-0 text-uppercase font_10 d-flex justify-content-end">
+		 <li><a class="gray_dark" href="#">Logout</a></li>
+		 <li class="gray_dark mx-2">/</li>
+		 <li class="nav-item dropdown">
+          <a class="dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Language: <span class="col_yellow">EN</span> <img src="image/icons-svg/chevron-down.svg" width="10" height="10" alt="Submenu open/close icon">
+          </a>
+          <ul class="dropdown-menu drop_top shadow" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#"> Hindi</a></li>
+			<li><a class="dropdown-item" href="#"> English</a></li>
+			<li><a class="dropdown-item" href="#"> German</a></li>
+			<li><a class="dropdown-item border-0" href="#"> Spanish</a></li>
+          </ul>
+        </li>
+		<li class="gray_dark mx-2">/</li>
+		 <li class="nav-item dropdown">
+          <a class="dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Currency: <span class="col_yellow">Usd</span> <img src="image/icons-svg/chevron-down.svg" width="10" height="10" alt="Submenu open/close icon">
+          </a>
+          <ul class="dropdown-menu drop_top shadow" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#"> Dollor</a></li>
+			<li><a class="dropdown-item" href="#"> Pound</a></li>
+			<li><a class="dropdown-item" href="#"> Euro</a></li>
+			<li><a class="dropdown-item border-0" href="#"> Rupee</a></li>
+          </ul>
+        </li>
+		 <li class="gray_dark mx-2">/</li>
+		 <li><a class="text-white" href="#">Wishlist <span class="col_yellow">7</span></a></li>
+		 <li class="gray_dark mx-2">/</li>
+		 <li><a class="text-white" href="#">Your Account </a></li>
+		</ul>
+	  </div>
+	 </div>
+   </div>
+ </section>
+ 
+ <section id="header_top" class="bg_black pt-3 pb-3">
+   <div class="container-xl">
+     <div class="row header_top_1 pt-1">
+	  <div class="col-md-12">
+	    <ul class="mb-0 text-uppercase font_10 d-flex">
+		 <li>
+		   <div class="input-group rounded-pill bg-dark px-3">
+			<input type="text" class="form-control bg-transparent border-0 font_10 text-white" placeholder="Enter your search here...">
+			<span class="input-group-btn">
+				<button class="btn btn-primary bg-transparent border-0 rounded-0 p-1 px-3" type="button">
+					<i class="fa fa-search col_yellow font_14"></i> </button>
+			</span>
+		</div>
+		</li>
+		<li class="d-flex ms-4">
+				 <span class="col_yellow fs-4 d-inline-block me-3">
+				   <i class="fa fa-map-marker"></i>
+				 </span>
+				  <span class="flex-column">
+				   <b class="text-white">Our Address</b>
+				   <span class="gray_dark d-block">Semper Rd, Porta, NY 12203, USA</span>
+				 </span>
+				</li>
+		<li class="d-flex ms-4">
+				 <span class="col_yellow fs-4 d-inline-block me-3">
+				   <i class="fa fa-user"></i>
+				 </span>
+				  <span class="flex-column">
+				   <b class="text-white">Join our Team</b>
+				   <span class="gray_dark d-block">info@gmail.com</span>
+				 </span>
+				</li>
+		<li class="d-flex ms-4">
+				 <span class="col_yellow fs-4 d-inline-block me-3">
+				   <i class="fa fa-envelope"></i>
+				 </span>
+				  <span class="flex-column">
+				   <b class="text-white">Contact us</b>
+				   <span class="gray_dark d-block">info@gmail.com</span>
+				 </span>
+				</li>
+				<li class="d-flex ms-4">
+				 <span class="col_yellow fs-4 d-inline-block me-3">
+				   <i class="fa fa-phone"></i>
+				 </span>
+				  <span class="flex-column">
+				   <b class="text-white">Phone</b>
+				   <span class="gray_dark d-block">+ (123) 124-567-8901</span>
+				 </span>
+				</li>
+		</ul>
+	  </div>
+	 </div>
+   </div>
+ </section>
+
+ <section id="header">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+      <div class="container-xl">
+         <a class="d-flex text-white" href="index.html">
+			 <b class="fs-4  d-block text-uppercase logo bg_black p-2 px-3"> <i class="fa-brands fa-nfc-directional col_yellow me-1"></i> Popular News</b>
+	     </a>
+         <button class="navbar-toggler offcanvas-nav-btn  ms-auto me-3" type="button">
+            <img src="image/icons-svg/list.svg" width="40" height="40" alt="Open TemplateOnweb website menu"/>
+         </button>
+         <div class="offcanvas offcanvas-start offcanvas-nav" style="width: 20rem">
+            <div class="offcanvas-header shadow">
+			    <a class="d-flex text-white" href="index.html">
+					 <b class="fs-4  d-block text-uppercase logo"> <i class="fa-brands fa-nfc-directional col_yellow me-1"></i> Popular News</b>
+				 </a>
+               <img src="image/icons-svg/x.svg" width="40" height="40" class="ms-auto" data-bs-dismiss="offcanvas" aria-label="Close" alt="Close TemplateOnweb website menu"/>
+			   
+            </div>
+            <div class="offcanvas-body pt-0 align-items-center">
+               <ul class="navbar-nav align-items-lg-center ms-auto">
+			      <li class="nav-item"> 
+				      <a class="nav-link dropdown-toggle" href="index.html" title="Visit home page">
+					  Home
+					  </a>
+				  </li>
+				  <li class="nav-item"> 
+				      <a class="nav-link dropdown-toggle" href="sport.html" title="Visit home page">
+					  Sports
+					  </a>
+				  </li>
+				  <li class="nav-item"> 
+				      <a class="nav-link dropdown-toggle" href="entertainment.html" title="Visit home page">
+					  Entertainment
+					  </a>
+				  </li>
+				  
+				  <li class="nav-item"> 
+				      <a class="nav-link dropdown-toggle" href="travel.html" title="Visit home page">
+					  Travel
+					  </a>
+				  </li>
+		
+		          <li class="nav-item dropdown drop_border">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            News<img src="image/icons-svg/chevron-down.svg" width="15" height="15" alt="Submenu open/close icon">
+          </a>
+          <ul class="dropdown-menu drop_1 shadow" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="foreign.html"> News</a></li>
+			<li><a class="dropdown-item border-0" href="news_detail.html"> News Detail</a></li>
+          </ul>
+        </li>
+		
+		         <li class="nav-item dropdown drop_border">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Pages<img src="image/icons-svg/chevron-down.svg" width="15" height="15" alt="Submenu open/close icon">
+          </a>
+          <ul class="dropdown-menu drop_1 shadow" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="videos.html"> Videos</a></li>
+			<li><a class="dropdown-item border-0" href="team.html"> Team</a></li>
+          </ul>
+        </li>
+				  
+				  <li class="nav-item"> 
+				      <a class="nav-link dropdown-toggle" href="contact.html" title="Visit home page">
+					  Contact Us
+					  </a>
+				  </li>
+               </ul>
+			   <ul class="navbar-nav align-items-lg-center ms-auto social_nav">
+			        <li class="nav-item"> 
+				      <a class="nav-link dropdown-toggle px-3" href="#" title="Visit home page">
+					    <i class="fa-brands fa-facebook-f"></i>
+					  </a>
+				  </li>
+				  <li class="nav-item"> 
+				      <a class="nav-link dropdown-toggle px-3" href="#" title="Visit home page">
+					    <i class="fa-brands fa-twitter"></i>
+					  </a>
+				  </li>
+				  <li class="nav-item"> 
+				      <a class="nav-link dropdown-toggle col_yellow px-3" href="#" title="Visit home page">
+					    <i class="fa-brands fa-instagram"></i>
+					  </a>
+				  </li>
+                 </ul>
+            </div>
+         </div>    
+         </div>
+      </div>
+   </nav>
+ </section>
+ 
+
+ <section id="contact" class="bg-light">
+   <div class="container-fluid p-0">
+     <div class="row mx-0">
+	       <div class="col-md-2 p-0">
+		     <div class="footer_bottom_left contact_left text-xl-end p-3 position-relative">
+			     <span class="text-white fs-6 fw-bold ms-5">Videos</span>
+			 </div>
+		   </div>
+		   <div class="col-md-10 p-0">
+		     <div class="contact_righto  p-3 bg-white">
+			      <span class="mb-0 font_11 light_gray"><a class="fw-bold" href="#">Home</a> <span class="mx-2">/</span> Videos</span>
+			 </div>
+		   </div>
+		 </div>
+   </div>
+ </section>
+ 
+ <section id="vidoes" class="bg-light pt-5 pb-5">
+   <div class="container-xl">
+     <div class="row video_1">
+	   <div class="col-md-12">
+	    <ul class="mb-0 d-block nav nav-tabs border-0 font_14 justify-content-center d-flex">
+		 <li class="d-inline-block me-1 mt-1 mb-1"><a class="border_orange d-block p-3 px-5 pill active" data-bs-toggle="tab" aria-expanded="true" href="#profile1">Business</a></li>
+		 <li class="me-1 d-inline-block mt-1 mb-1"><a class="border_orange d-block p-3 px-5" data-bs-toggle="tab" aria-expanded="true" href="#profile2">Entertainment</a></li>
+		 
+		 <li class="d-inline-block me-1 mt-1 mb-1"><a class="border_orange d-block p-3 px-5" data-bs-toggle="tab" aria-expanded="true" href="#profile3">Travel</a></li>
+		  
+		   <li class="d-inline-block me-1 mt-1 mb-1"><a class="border_orange d-block p-3 px-5" data-bs-toggle="tab" aria-expanded="true" href="#profile4">Politics</a></li>
+		    <li class="d-inline-block me-1 mt-1 mb-1"><a class="border_orange d-block p-3 px-5" data-bs-toggle="tab" aria-expanded="true" href="#profile5">Sports</a></li>
+			 
+		</ul>
+		
+		<div class="tab-content  mt-4">
+			  <div class="tab-pane active" id="profile1">
+			    <div class="content_main">
+				  <div class="row">
+				   <div class="col-md-12">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/31.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block fs-3 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				  </div> 
+				  <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mt-3">
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/36.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/37.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 17, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/38.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Chloe Skelton five-for propels Western Storm to victory</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 19, 2016</span>
+					</div>
+				  </div>
+				   </div>
+			  </div>
+			      <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mt-3">
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/39.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/40.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 17, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/41.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Chloe Skelton five-for propels Western Storm to victory</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 19, 2016</span>
+					</div>
+				  </div>
+				   </div>
+			  </div>
+				</div>
+			  </div>
+			
+			<div class="tab-pane" id="profile2">
+			   <div class="content_main">
+				  <div class="row">
+				   <div class="col-md-12">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/32.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block fs-3 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				  </div> 
+				  <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mt-3">
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/42.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/43.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 17, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/44.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Chloe Skelton five-for propels Western Storm to victory</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 19, 2016</span>
+					</div>
+				  </div>
+				   </div>
+			  </div>
+			      <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mt-3">
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/45.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/46.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 17, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/47.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Chloe Skelton five-for propels Western Storm to victory</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 19, 2016</span>
+					</div>
+				  </div>
+				   </div>
+			  </div>
+				</div>
+			</div> 
+			
+			<div class="tab-pane" id="profile3">
+			     <div class="content_main">
+				  <div class="row">
+				   <div class="col-md-12">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/33.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block fs-3 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				  </div> 
+				  <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mt-3">
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/48.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/49.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 17, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/50.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Chloe Skelton five-for propels Western Storm to victory</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 19, 2016</span>
+					</div>
+				  </div>
+				   </div>
+			  </div>
+			      <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mt-3">
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/51.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/52.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 17, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/53.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Chloe Skelton five-for propels Western Storm to victory</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 19, 2016</span>
+					</div>
+				  </div>
+				   </div>
+			  </div>
+				</div>
+			</div>
+			
+			<div class="tab-pane" id="profile4">
+			     <div class="content_main">
+				  <div class="row">
+				   <div class="col-md-12">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/34.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block fs-3 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				  </div> 
+				  <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mt-3">
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/54.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/55.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 17, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/56.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Chloe Skelton five-for propels Western Storm to victory</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 19, 2016</span>
+					</div>
+				  </div>
+				   </div>
+			  </div>
+			      <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mt-3">
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/57.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/58.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 17, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/59.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Chloe Skelton five-for propels Western Storm to victory</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 19, 2016</span>
+					</div>
+				  </div>
+				   </div>
+			  </div>
+				</div>
+			</div>
+			
+			<div class="tab-pane" id="profile5">
+			     <div class="content_main">
+				  <div class="row">
+				   <div class="col-md-12">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/35.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block fs-3 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				  </div> 
+				  <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mt-3">
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/60.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/61.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 17, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/62.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Chloe Skelton five-for propels Western Storm to victory</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 19, 2016</span>
+					</div>
+				  </div>
+				   </div>
+			  </div>
+			      <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 mt-3">
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/63.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Incididunt ut labore et dolore <br> magna aliqua Ut enim</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/64.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Lorem ipsum dolor sit amet, cibo mundi ea duo, vim exerci</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 17, 2016</span>
+					</div>
+				  </div>
+				   </div>
+				   <div class="col">
+				     <div class="video_2 position-relative">
+				    <div class="video_2_inner">
+					  <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><img src="image/65.jpg" alt="abc" class="w-100 rounded_10"></a>
+					</div>
+					<div class="video_2_inner1 position-absolute bg_back top-0 w-100 h-100 text-center">
+					  <span class="d-block"><a class="d-inline-block  text-white rounded-circle  video_icon text-center fs-5" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#templateVideoModal"><i class="fa fa-play"></i></a></span>
+					  <b><a class="text-white link d-block font_14 text-uppercase mt-3" href="#">Chloe Skelton five-for propels Western Storm to victory</a></b>
+					  <span class="text-light font_11 fw-bold  text-uppercase d-block mt-2"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 19, 2016</span>
+					</div>
+				  </div>
+				   </div>
+			  </div>
+				</div>
+			</div>
+			
+			</div>
+	   </div>
+	 </div>
+   </div>
+ </section>
+ 
+ <section id="footer" class="pt-5 pb-5 bg_black">
+   <div class="container-xl">
+     <div class="row row-cols-1 row-cols-md-4">
+	    <div class="col">
+		  <div class="footer_left">
+		    <b class="fs-4  d-block text-uppercase text-white center_sm"> <i class="fa-brands fa-nfc-directional col_yellow me-1"></i> Popular News</b>
+			<p class="gray_dark mt-3">Your source for the lifestyle news. This demo is crafted specifically to exhibit the use of the theme as a lifestyle site. Visit our main page for more demos.</p>
+			<p class="gray_dark">We're accepting new partnerships right now.</p>
+			<ul class="gray_dark font_12">
+		    <li class="d-flex"><span class="text-white me-3">Email Us:</span> info@example.com</li>
+			<li class="d-flex mt-1"><span class="text-white me-3">Contact:</span>  +1-234-0123-431</li>
+		   </ul>
+		   <ul class="mb-0 d-flex social mt-3">
+		  <li><a class="d-block rounded-circle text-center text-white  link" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+		  <li class="ms-2"><a class="d-block rounded-circle text-center text-white link" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+		   <li class="ms-2"><a class="d-block rounded-circle text-center text-white link" href="#"><i class="fa-brands fa-x"></i></a></li>
+		   <li class="ms-2"><a class="d-block rounded-circle text-center text-white link" href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+		   <li class="ms-2"><a class="d-block rounded-circle text-center text-white link" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+		</ul>
+		  </div>
+		</div>
+		<div class="col">
+		  <div class="footer_left">
+		    <b class="text-uppercase text-white font_13 d-block mb-4 mt-2 center_sm">Contact Info</b>
+			<p class="gray_dark">quasi, eum. class corporis nostra rem voluptatibus habitant? Fames, vivamus minim nemo enim, gravida lobortis quasi, eum.</p>
+			<ul class="mb-0 font_10 mt-4">
+			    <li class="d-flex text-uppercase">
+				 <span class="col_yellow fs-4 d-inline-block me-3 lh-1 mt-1">
+				   <i class="fa fa-user"></i>
+				 </span>
+				  <span class="flex-column">
+				   <b class="text-white">Join our Team</b>
+				   <span class="text-white-50 d-block">info@gmail.com</span>
+				 </span>
+				</li>
+				<li class="d-flex text-uppercase mt-4">
+				 <span class="col_yellow fs-4 d-inline-block me-3 lh-1 mt-1">
+				   <i class="fa fa-map-location"></i>
+				 </span>
+				  <span class="flex-column">
+				   <b class="text-white">Contact Us</b>
+				   <span class="text-white-50 d-block">info@gmail.com</span>
+				 </span>
+				</li>
+				<li class="d-flex text-uppercase mt-4">
+				 <a class="text-white-50" href="#"><i class="fa-brands fa-facebook-f text-white me-1"></i> Facebook</a>
+				 <a class="text-white-50 mx-2" href="#"><i class="fa-brands fa-twitter text-white me-1"></i> Twitter</a>
+				  <a class="text-white" href="#"><i class="fa-brands fa-google-plus-g col_yellow me-1"></i> Google+</a>
+				</li>
+			  </ul>
+		 </div>
+		</div>
+		<div class="col">
+		  <div class="footer_left">
+		    <b class="text-uppercase text-white font_13 d-block mb-4 mt-2 center_sm">Popular News</b>
+		<ul class="mb-0">
+		     <li class="d-flex">
+			   <span class="flex-column">
+			     <span class="d-inline-block bg_yellow text-white p-1 px-3 font_10 rounded-3 text-uppercase">The Team</span>
+				 <b class="d-block  text-uppercase"><a class="font_11 text-white" href="#">We are a Temple that belives in God and the followers</a></b>
+				 <span class="gray_dark font_10">Aug 13, 2016</span>
+			   </span>
+			 </li>
+			 <li class="d-flex mt-2">
+			   <span class="flex-column">
+			     <span class="d-inline-block bg-primary text-white p-1 px-3 font_10 rounded-3 text-uppercase">Injuries</span>
+				 <b class="d-block  text-uppercase"><a class="font_11 text-white" href="#">We are a Temple that belives in God and the followers</a></b>
+				 <span class="gray_dark font_10">Aug 13, 2016</span>
+			   </span>
+			 </li>
+			 <li class="d-flex mt-2">
+			   <span class="flex-column">
+			     <span class="d-inline-block bg-danger text-white p-1 px-3 font_10 rounded-3 text-uppercase">Sport</span>
+				 <b class="d-block  text-uppercase"><a class="font_11 text-white" href="#">We are a Temple that belives in God and the followers</a></b>
+				 <span class="gray_dark font_10">Aug 13, 2016</span>
+			   </span>
+			 </li>
+		   </ul>
+		 </div>
+		</div>
+		<div class="col">
+		  <div class="footer_left">
+		    <b class="text-uppercase text-white font_13 d-block mb-4 mt-2 center_sm">Instagram Widget</b>
+            <ul class="mb-0">
+			 <li class="d-flex">
+			   <a href="#"><img src="image/10.jpg" width="80" alt="abc"></a>
+			   <a class="mx-2" href="#"><img src="image/11.jpg" width="80" alt="abc"></a>
+			   <a href="#"><img src="image/12.jpg" width="80" alt="abc"></a>
+			 </li>
+			 <li class="d-flex mt-2">
+			   <a href="#"><img src="image/14.jpg" width="80" alt="abc"></a>
+			   <a class="mx-2" href="#"><img src="image/15.jpg" width="80" alt="abc"></a>
+			   <a href="#"><img src="image/24.jpg" width="80" alt="abc"></a>
+			 </li>
+			  <li class="mt-4 center_sm">
+			   <a class="font_10 text-uppercase button_1 fw-bold d-inline-block rounded-1" href="#">Follow Our Instagram <i class="fa fa-chevron-right ms-2 font_8"></i> </a>
+			 </li>
+			</ul>
+		 </div>
+		</div>
+	 </div>
+   </div>
+ </section>
+ 
+ <section id="footer_bottom" class="bg-dark">
+    <div class="container-fluid p-0">
+     	 <div class="row mx-0">
+	       <div class="col-md-2 p-0">
+		     <div class="footer_bottom_left bg_yellow p-4 position-relative">
+			    
+			 </div>
+		   </div>
+		   <div class="col-md-8 p-0">
+		     <div class="footer_bottom_center">
+			      <ul class="mb-0 text-uppercas d-flex justify-content-center font_10 text-uppercase fw-bold flex-wrap">
+				   <li><a class="d-block" href="#">Home</a></li>
+				   <li><a class="d-block active" href="#">Features</a></li>
+				   <li><a class="d-block" href="#">Statistics</a></li>
+				   <li><a class="d-block" href="#">The Team</a></li>
+				   <li><a class="d-block" href="#">News</a></li>
+				   <li><a class="d-block" href="#">Shop</a></li>
+				  </ul>
+			 </div>
+		   </div>
+		   <div class="col-md-2 p-0">
+		     <div class="footer_bottom_right bg_yellow p-4 position-relative">
+			    
+			 </div>
+		   </div>
+		 </div>
+	</div>
+   </section>
+   
+<!-- Video Modal -->
+		<div class="modal fade" id="templateVideoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="videoModalLabel">Cricket template Youtube video</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+			  <div class="modal-body">
+					<!-- YouTube Embed -->
+						<div class="ratio ratio-16x9">
+							<iframe id="youtubeVideo" src="" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" loading="lazy" allowfullscreen></iframe>
+						</div>
+					
+					
+			  </div>
+			  
+			</div>
+		  </div>
+		</div>		
+		<!-- JavaScript to pause the video when modal is closed -->
+		<script>
+		 var templateVideoModal = document.getElementById('templateVideoModal');
+		  templateVideoModal.addEventListener('hide.bs.modal', function () {
+			var iframe = document.getElementById('youtubeVideo');
+			iframe.src = ''; 
+		  });
+		
+		  templateVideoModal.addEventListener('show.bs.modal', function () {
+			var iframe = document.getElementById('youtubeVideo');
+			iframe.src = 'https://www.youtube.com/embed/xHYMdZvV1f0?autoplay=1'; 
+		  });
+		</script>
+		
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/theme.min.js"></script>
+
+<script src="js/youtube-player.js"></script>
+
+
+</body>
+</html>

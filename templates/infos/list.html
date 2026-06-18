@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List View</title>
+</head>
+<body>
+<h2>List of News</h2>
+<ul>{% for new in news %}
+    {% if new.status == "PB" %}
+    <li>{{new.title}}</li>
+    {% else %}
+    <p>No published News yet</p>
+    {% endif %}
+{% endfor %}
+</ul>
+</body>
+</html>

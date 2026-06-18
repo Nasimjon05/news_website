@@ -1,0 +1,352 @@
+{% extends 'infos/base.html' %}
+{% load static %}
+{% block title %} Technology {% endblock title %}
+
+{% block content %}
+
+ <section id="contact" class="bg-light">
+   <div class="container-fluid p-0">
+     <div class="row mx-0">
+	       <div class="col-md-2 p-0">
+		     <div class="footer_bottom_left contact_left text-xl-end p-3 position-relative">
+			     <span class="text-white fs-6 fw-bold ms-5">Technology</span>
+			 </div>
+		   </div>
+		   <div class="col-md-10 p-0">
+		     <div class="contact_righto  p-3 bg-white">
+			      <span class="mb-0 font_11 light_gray"><a class="fw-bold" href="#">Home</a> <span class="mx-2">/</span> News</span>
+			 </div>
+		   </div>
+		 </div>
+   </div>
+ </section>
+
+
+ <section id="news" class="pt-5 pb-5 bg-light">
+   <div class="container-xl">
+     <div class="row news_1">
+	  <div class="col-md-8">
+	     <div class="news_1_left">
+             {% for news in technology_news %}
+		   <div class="news_1_left2 mb-2">
+
+			  <div class="card">
+			<div class="card-body p-0">
+			  <div class="row row-cols-1 row-cols-sm-1 row-cols-lg-2 row-cols-md-1 mx-0">
+			    <div class="col p-0">
+				  <div class="blog_inner_left position-relative">
+				     <div class="blog_inner_left1">
+				       <a href="{{ news.get_absolute_url }}"><img src="{{ news.image.url }}" class="img-fluid" alt="..."></a>
+				     </div>
+
+				  </div>
+				</div>
+				<div class="col p-0">
+				  <div class="blog_inner_right pt-4 d-flex flex-column align-items-start">
+				    <b class="d-inline-block bg_yellow text-white p-1 px-3 font_10 text-uppercase rounded-1 mx-3">Latest</b>
+					 <b class="d-block fs-5 text-uppercase mt-2 mb-1 px-3"><a href="{{ news.get_absolute_url }}">{{ news.title }}</a></b>
+				    <span class="light_gray font_12 fw-bold px-3 text-uppercase">{{ news.published }}</span>
+
+		 <p class="mt-3 px-3 mb-0 pb-4">{{ news.body|truncatewords:10 }}</p>
+		 <div class="mt-auto w-100">
+
+						<ul class="mb-0 px-3 py-3 font_11 fw-bold text-uppercase justify-content-between d-flex border-top" >
+							   <li>
+							   <a href="news_detail.html"><img class="rounded-circle" alt="abc" src="image/9.jpg"></a>
+							   <span class="light_gray ms-2">Eget Nulla</span>
+							   </li>
+							   <li class="my-auto">
+							   <a class="light_gray" href="news_detail.html"><i class="fa fa-eye me-1"></i> 2277</a>
+								<a class="light_gray mx-3" href="news_detail.html"><i class="fa fa-heart me-1 text-danger"></i> 545</a>
+								 <a class="light_gray" href="news_detail.html"><i class="fa fa-comment me-1"></i> 16</a>
+							   </li>
+							 </ul>
+
+						</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			</div>
+           </div>
+             {% endfor %}
+             </div>
+
+      </div>
+
+	  <div class="col-md-4">
+	     <div class="news_1_right">
+		    <div class="news_1_right1 bg-white border_light">
+			  <b class="d-block text-uppercase p-3 border_thick">Popular News</b>
+			  <ul class="mb-0 border-top pt-3">
+		     <li class="d-flex border-bottom  pb-3 mb-3">
+			   <span class="ps-3"><a href="news_detail.html"><img width="70" alt="abc"  src="image/20.jpg"></a></span>
+			   <span class="flex-column mx-3">
+			     <b class="d-inline-block bg_violet text-white p-1 px-3 font_10 text-uppercase rounded-1">Latest</b>
+					 <b class="d-block font_13 text-uppercase mt-1"><a href="news_detail.html">TEMPOR INCIDIDUNT UT LABORE   UT ENIM AD MINIM</a></b>
+				    <span class="light_gray font_10 fw-bold  text-uppercase"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 13, 2016</span>
+			   </span>
+			 </li>
+		    <li class="d-flex border-bottom pb-3 mb-3">
+			   <span class="ps-3"><a href="news_detail.html"><img width="70" alt="abc"  src="image/21.jpg"></a></span>
+			   <span class="flex-column mx-3">
+			     <b class="d-inline-block bg_yellow text-white p-1 px-3 font_10 text-uppercase rounded-1">Popular</b>
+					 <b class="d-block font_13 text-uppercase mt-1"><a href="news_detail.html">CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD</a></b>
+				    <span class="light_gray font_10 fw-bold  text-uppercase"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 14, 2016</span>
+			   </span>
+			 </li>
+			  <li class="d-flex border-bottom pb-3 mb-3">
+			   <span class="ps-3"><a href="news_detail.html"><img width="70" alt="abc"  src="image/22.jpg"></a></span>
+			   <span class="flex-column mx-3">
+			     <b class="d-inline-block bg_yellow text-white p-1 px-3 font_10 text-uppercase rounded-1">Latest</b>
+					 <b class="d-block font_13 text-uppercase mt-1"><a href="news_detail.html">TEMPOR INCIDIDUNT UT LABORE   UT ENIM AD MINIM</a></b>
+				    <span class="light_gray font_10 fw-bold  text-uppercase"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 15, 2016</span>
+			   </span>
+			 </li>
+		    <li class="d-flex pb-3">
+			   <span class="ps-3"><a href="news_detail.html"><img width="70" alt="abc"  src="image/23.jpg"></a></span>
+			   <span class="flex-column mx-3">
+			     <b class="d-inline-block bg_yellow text-white p-1 px-3 font_10 text-uppercase rounded-1">Popular</b>
+					 <b class="d-block font_13 text-uppercase mt-1"><a href="news_detail.html">CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD</a></b>
+				    <span class="light_gray font_10 fw-bold  text-uppercase"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 17, 2016</span>
+			   </span>
+			 </li>
+		   </ul>
+			</div>
+			<div class="news_1_right1 bg-white mt-3 border_light">
+			  <b class="d-block text-uppercase p-3 border_thick">Trending News</b>
+			    <div class="news_1_left1_inner_right">
+				    <ul class="nav nav-tabs mb-0 fw-bold font_11 border-top border-bottom pt-1 pb-1 justify-content-around">
+    <li class="nav-item d-inline-block">
+        <a href="#profile8" data-bs-toggle="tab" aria-expanded="false" class="nav-link active text-center">
+            <span class="d-md-block text-uppercase">Newest</span>
+        </a>
+    </li>
+	<li class="nav-item d-inline-block">
+        <a href="#profile9" data-bs-toggle="tab" aria-expanded="true" class="nav-link text-center">
+            <span class="d-md-block text-uppercase">Most Commented</span>
+        </a>
+    </li>
+	<li class="nav-item d-inline-block">
+        <a href="#profile10" data-bs-toggle="tab" aria-expanded="true" class="nav-link border-end-0 text-center">
+            <span class="d-md-block text-uppercase">Popular</span>
+        </a>
+    </li>
+
+</ul>
+				  </div>
+				<div class="tab-content">
+		   <div class="tab-pane active" id="profile8">
+		       <div class="profile8_inner">
+			     <ul class="mb-0 mt-3">
+		    <li class="border-bottom pb-3 mb-3">
+			    <b class="d-inline-block bg_yellow text-white p-1 px-3 font_10 text-uppercase rounded-1 mx-3">Newest</b>
+					 <b class="d-block font_15 text-uppercase mt-2  px-3"><a href="news_detail.html">TEMPOR INCIDIDUNT UT LABORE  MAGNA ALIQUA. UT ENIM AD MINIM</a></b>
+				    <span class="light_gray font_10 fw-bold  text-uppercase px-3"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 13, 2016</span>
+
+		 <span class="gray_dark mt-3 px-3 font_12 mb-0 d-block">Praesent sapien massa, convallis a semper pellentesque nec, egestas non nisi. </span>
+			</li>
+			<li class="border-bottom pb-3 mb-3">
+			    <b class="d-inline-block bg_orange text-white p-1 px-3 font_10 text-uppercase rounded-1 mx-3">Newest</b>
+					 <b class="d-block font_15 text-uppercase mt-2  px-3"><a href="news_detail.html"> SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD</a></b>
+				    <span class="light_gray font_10 fw-bold  text-uppercase px-3"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 14, 2016</span>
+
+		 <span class="gray_dark mt-3 px-3 font_12 mb-0 d-block">Donec sollicitudin molestie malesuada. Mauris blandit aliquet elit"</span>
+			</li>
+			<li class="pb-3">
+			    <b class="d-inline-block bg_yellow text-white p-1 px-3 font_10 text-uppercase rounded-1 mx-3">Newest</b>
+					 <b class="d-block font_15 text-uppercase mt-2  px-3"><a href="news_detail.html">TEMPOR INCIDIDUNT UT LABORE  MAGNA ALIQUA. UT ENIM AD MINIM</a></b>
+				    <span class="light_gray font_10 fw-bold  text-uppercase px-3"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 16, 2016</span>
+
+		 <span class="gray_dark mt-3 px-3 font_12 mb-0 d-block">Praesent sapien massa, convallis a semper pellentesque nec, egestas non nisi. </span>
+			</li>
+		   </ul>
+			   </div>
+		   </div>
+		   <div class="tab-pane" id="profile9">
+               <div class="profile8_inner">
+			     <ul class="mb-0 mt-3">
+		    <li class="border-bottom pb-3 mb-3">
+			    <b class="d-inline-block bg_yellow text-white p-1 px-3 font_10 text-uppercase rounded-1 mx-3">Commented</b>
+					 <b class="d-block font_15 text-uppercase mt-2  px-3"><a href="news_detail.html">TEMPOR INCIDIDUNT UT LABORE  MAGNA ALIQUA. UT ENIM AD MINIM</a></b>
+				    <span class="light_gray font_10 fw-bold  text-uppercase px-3"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 13, 2016</span>
+
+		 <span class="gray_dark mt-3 px-3 font_12 mb-0 d-block">Praesent sapien massa, convallis a semper pellentesque nec, egestas non nisi. </span>
+			</li>
+			<li class="border-bottom pb-3 mb-3">
+			    <b class="d-inline-block bg_orange text-white p-1 px-3 font_10 text-uppercase rounded-1 mx-3">Commented</b>
+					 <b class="d-block font_15 text-uppercase mt-2  px-3"><a href="news_detail.html"> SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD</a></b>
+				    <span class="light_gray font_10 fw-bold  text-uppercase px-3"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 14, 2016</span>
+
+		 <span class="gray_dark mt-3 px-3 font_12 mb-0 d-block">Donec sollicitudin molestie malesuada. Mauris blandit aliquet elit"</span>
+			</li>
+			<li class="pb-3">
+			    <b class="d-inline-block bg_yellow text-white p-1 px-3 font_10 text-uppercase rounded-1 mx-3">Commented</b>
+					 <b class="d-block font_15 text-uppercase mt-2  px-3"><a href="news_detail.html">TEMPOR INCIDIDUNT UT LABORE  MAGNA ALIQUA. UT ENIM AD MINIM</a></b>
+				    <span class="light_gray font_10 fw-bold  text-uppercase px-3"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 16, 2016</span>
+
+		 <span class="gray_dark mt-3 px-3 font_12 mb-0 d-block">Praesent sapien massa, convallis a semper pellentesque nec, egestas non nisi. </span>
+			</li>
+		   </ul>
+			   </div>
+		   </div>
+		   <div class="tab-pane" id="profile10">
+		        <ul class="mb-0 mt-3">
+		    <li class="border-bottom pb-3 mb-3">
+			    <b class="d-inline-block bg_yellow text-white p-1 px-3 font_10 text-uppercase rounded-1 mx-3">Popular</b>
+					 <b class="d-block font_15 text-uppercase mt-2  px-3"><a href="news_detail.html">TEMPOR INCIDIDUNT UT LABORE  MAGNA ALIQUA. UT ENIM AD MINIM</a></b>
+				    <span class="light_gray font_10 fw-bold  text-uppercase px-3"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 13, 2016</span>
+
+		 <span class="gray_dark mt-3 px-3 font_12 mb-0 d-block">Praesent sapien massa, convallis a semper pellentesque nec, egestas non nisi. </span>
+			</li>
+			<li class="border-bottom pb-3 mb-3">
+			    <b class="d-inline-block bg_orange text-white p-1 px-3 font_10 text-uppercase rounded-1 mx-3">Popular</b>
+					 <b class="d-block font_15 text-uppercase mt-2  px-3"><a href="news_detail.html"> SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD</a></b>
+				    <span class="light_gray font_10 fw-bold  text-uppercase px-3"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 14, 2016</span>
+
+		 <span class="gray_dark mt-3 px-3 font_12 mb-0 d-block">Donec sollicitudin molestie malesuada. Mauris blandit aliquet elit"</span>
+			</li>
+			<li class="pb-3">
+			    <b class="d-inline-block bg_yellow text-white p-1 px-3 font_10 text-uppercase rounded-1 mx-3">Popular</b>
+					 <b class="d-block font_15 text-uppercase mt-2  px-3"><a href="news_detail.html">TEMPOR INCIDIDUNT UT LABORE  MAGNA ALIQUA. UT ENIM AD MINIM</a></b>
+				    <span class="light_gray font_10 fw-bold  text-uppercase px-3"> <i class="fa fa-clock me-1 text-warning align-middle"></i> Aug 16, 2016</span>
+
+		 <span class="gray_dark mt-3 px-3 font_12 mb-0 d-block">Praesent sapien massa, convallis a semper pellentesque nec, egestas non nisi. </span>
+			</li>
+		   </ul>
+		   </div>
+
+		 </div>
+			</div>
+			<div class="news_1_right1 bg-white mt-3 border_light">
+			  <b class="d-block text-uppercase p-3 border_thick">Twitter Widget</b>
+			  <ul class="mb-0 border-top pt-4 pb-4">
+			    <li class="d-flex px-3">
+			   <span><a href="news_detail.html"><img width="40" alt="abc"  src="image/25.jpg"></a></span>
+			   <span class="flex-column mx-2">
+			     <b class="d-block   font_14 lh-1">The Ipsum</b>
+				 <span class="light_gray font_10 fw-bold  mt-1 d-block">  @ipsum</span>
+			   </span>
+			 </li>
+			    <li class="px-3 mt-2">
+			    <span class="flex-column">
+				  <span class="gray_dark font_12 d-block">Praesent sapien massa, convallis a semper pellentesque nec, <a class="col_yellow" href="news_detail.html">egestas</a> non nisi.</span>
+				</span>
+				</li>
+				<li class="px-3 mt-2 font_12">
+			       <span>
+				     <i class="fa-brands fa-twitter text-info align-middle mt-1"></i> <span class="light_gray font_11 align-middle ms-1"> 2 hour ago</span>
+				   </span>
+				   <span class="float-end">
+				     <a href="news_detail.html"><i class="fa fa-heart light_gray font_11"></i></a>
+					  <a class="mx-2" href="news_detail.html"><i class="fa fa-share light_gray font_11"></i></a>
+					   <a href="news_detail.html"><i class="fa fa-star light_gray font_11"></i></a>
+				   </span>
+				</li>
+			  </ul>
+			  <ul class="mb-0 border-top pt-4 pb-4">
+			    <li class="d-flex px-3">
+			   <span><a href="news_detail.html"><img width="40" alt="abc"  src="image/26.jpg"></a></span>
+			   <span class="flex-column mx-2">
+			     <b class="d-block   font_14 lh-1">The Porta</b>
+				 <span class="light_gray font_10 fw-bold  mt-1 d-block">  @porta</span>
+			   </span>
+			 </li>
+			    <li class="px-3 mt-2">
+			    <span class="flex-column">
+				  <span class="gray_dark font_12 d-block">Praesent sapien massa, convallis a semper pellentesque nec, <a class="col_yellow" href="news_detail.html">egestas</a> non nisi.</span>
+				</span>
+				</li>
+				<li class="px-3 mt-2 font_12">
+			       <span>
+				     <i class="fa-brands fa-twitter text-info align-middle mt-1"></i> <span class="light_gray font_11 align-middle ms-1"> 3 hour ago</span>
+				   </span>
+				   <span class="float-end">
+				     <a href="news_detail.html"><i class="fa fa-heart light_gray font_11"></i></a>
+					  <a class="mx-2" href="news_detail.html"><i class="fa fa-share light_gray font_11"></i></a>
+					   <a href="news_detail.html"><i class="fa fa-star light_gray font_11"></i></a>
+				   </span>
+				</li>
+			  </ul>
+			  <ul class="mb-0 border-top pt-4 pb-4">
+			    <li class="d-flex px-3">
+			   <span><a href="news_detail.html"><img width="40" alt="abc"  src="image/27.jpg"></a></span>
+			   <span class="flex-column mx-2">
+			     <b class="d-block   font_14 lh-1">The Lorem</b>
+				 <span class="light_gray font_10 fw-bold  mt-1 d-block">  @lorem</span>
+			   </span>
+			 </li>
+			    <li class="px-3 mt-2">
+			    <span class="flex-column">
+				  <span class="gray_dark font_12 d-block">Praesent sapien massa, convallis a semper pellentesque nec, <a class="col_yellow" href="news_detail.html">egestas</a> non nisi.</span>
+				</span>
+				</li>
+				<li class="px-3 mt-2 font_12">
+			       <span>
+				     <i class="fa-brands fa-twitter text-info align-middle mt-1"></i> <span class="light_gray font_11 align-middle ms-1"> 4 hour ago</span>
+				   </span>
+				   <span class="float-end">
+				     <a href="news_detail.html"><i class="fa fa-heart light_gray font_11"></i></a>
+					  <a class="mx-2" href="news_detail.html"><i class="fa fa-share light_gray font_11"></i></a>
+					   <a href="news_detail.html"><i class="fa fa-star light_gray font_11"></i></a>
+				   </span>
+				</li>
+			  </ul>
+			</div>
+			<div class="news_1_right1 bg-white mt-3 border_light">
+			  <b class="d-block text-uppercase p-3 border_thick">Latest Comments</b>
+			  <ul class="mb-0 border-top pt-3">
+		     <li class="d-flex border-bottom pb-3 mb-3">
+			   <span class="ps-3"><a href="news_detail.html"><img width="40" alt="abc"  class="rounded-circle" src="image/25.jpg"></a></span>
+			   <span class="flex-column mx-3">
+				 <b class="d-block font_14"><a href="news_detail.html">Lorem Porta</a></b>
+				 <span class="light_gray font_10 d-block  fw-bold"><i class="fa fa-clock text-warning align-middle me-1"></i> 30 Min ago</span>
+				 <span class="light_gray font_12 mt-2 d-block"> Egestas non nisi. Donec sollicitudin molestie malesuada. Mauris blandit aliquet elit"</span>
+			   </span>
+			 </li>
+			 <li class="d-flex border-bottom pb-3 mb-3">
+			   <span class="ps-3"><a href="news_detail.html"><img width="40" alt="abc"  class="rounded-circle" src="image/26.jpg"></a></span>
+			   <span class="flex-column mx-3">
+				 <b class="d-block font_14"><a href="news_detail.html">Ipsum Amet</a></b>
+				 <span class="light_gray font_10 d-block  fw-bold"><i class="fa fa-clock text-warning align-middle me-1"></i> 33 Min ago</span>
+				 <span class="light_gray font_12 mt-2 d-block"> Egestas non nisi. Donec sollicitudin molestie malesuada. Mauris blandit aliquet elit"</span>
+			   </span>
+			 </li>
+			 <li class="d-flex pb-3">
+			   <span class="ps-3"><a href="news_detail.html"><img width="40" alt="abc"  class="rounded-circle" src="image/27.jpg"></a></span>
+			   <span class="flex-column mx-3">
+				 <b class="d-block font_14"><a href="news_detail.html">Semper Eget</a></b>
+				 <span class="light_gray font_10 d-block  fw-bold"><i class="fa fa-clock text-warning align-middle me-1"></i> 40 Min ago</span>
+				 <span class="light_gray font_12 mt-2 d-block"> Egestas non nisi. Donec sollicitudin molestie malesuada. Mauris blandit aliquet elit"</span>
+			   </span>
+			 </li>
+
+		   </ul>
+			</div>
+			<div class="news_1_right1 bg-white mt-3 border_light pb-3">
+			  <b class="d-block text-uppercase p-3 border_thick">Popular tags</b>
+		     <ul class="mb-0 d-flex flex-wrap text-uppercase font_11 tags border-top px-3 pt-3">
+		     <li class="mx-1 mt-1 mb-1"><a class="d-block border p-2 px-3" href="news_detail.html">News</a></li>
+			 <li class="mx-1 mt-1 mb-1"><a class="d-block border p-2 px-3" href="news_detail.html">Headlines</a></li>
+			 <li class="mx-1 mt-1 mb-1"><a class="d-block border p-2 px-3" href="news_detail.html">Politics</a></li>
+			 <li class="mx-1 mt-1 mb-1"><a class="d-block border p-2 px-3" href="news_detail.html">Travel</a></li>
+			  <li class="mx-1 mt-1 mb-1"><a class="d-block border p-2 px-3" href="news_detail.html">Event</a></li>
+			 <li class="mx-1 mt-1 mb-1"><a class="d-block border p-2 px-3" href="news_detail.html">lorem</a></li>
+			 <li class="mx-1 mt-1 mb-1"><a class="d-block border p-2 px-3" href="news_detail.html">porta</a></li>
+			 <li class="mx-1 mt-1 mb-1"><a class="d-block border p-2 px-3" href="news_detail.html">ipsum</a></li>
+			  <li class="mx-1 mt-1 mb-1"><a class="d-block border p-2 px-3" href="news_detail.html">eget</a></li>
+			 <li class="mx-1 mt-1 mb-1"><a class="d-block border p-2 px-3" href="news_detail.html">nulla</a></li>
+			  <li class="mx-1 mt-1 mb-1"><a class="d-block border p-2 px-3" href="news_detail.html">semper</a></li>
+			 <li class="mx-1 mt-1 mb-1"><a class="d-block border p-2 px-3" href="news_detail.html">quis</a></li>
+			 <li class="mx-1 mt-1 mb-1"><a class="d-block border p-2 px-3" href="news_detail.html">popular</a></li>
+			 <li class="mx-1 mt-1 mb-1"><a class="d-block border p-2 px-3" href="news_detail.html">trending</a></li>
+		   </ul>
+			</div>
+
+		 </div>
+	  </div>
+	 </div>
+   </div>
+ </section>
+
+ {% endblock content %}
