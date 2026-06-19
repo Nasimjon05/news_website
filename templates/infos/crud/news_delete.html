@@ -1,0 +1,17 @@
+{% extends 'infos/base.html' %}
+{% load static %}
+{% block content %}
+
+ <div class="container text-center m-3">
+     <form>{% csrf_token %}
+         <h2 class="mb-2">Do you really want to delete the news ???</h2>
+         <p>{{ news.title|truncatewords:4 }}</p>
+         <button class="btn btn-danger" type="submit">Yes, delete</button>
+         <a href="{{ news.get_absolute_url }}" class="btn btn-secondary">
+    No, thanks
+</a>
+     </form>
+
+ </div>
+
+{% endblock content %}

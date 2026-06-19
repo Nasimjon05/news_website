@@ -1,41 +1,19 @@
 from django.http import HttpResponse
 from django.shortcuts import render , get_object_or_404
-from django.views.generic import TemplateView, ListView
-from unicodedata import category
-
-from .context_processor import latest_news
+from django.urls import reverse_lazy
+from django.views.generic import TemplateView, ListView, UpdateView, DeleteView, CreateView
 from .forms import ContactForm
-# Create your views here.
 from .models import News, Category
 
+# Create your views here.
 
-def list_view(request):
-    news = News.objects.all()
-    context = {'news':news}
-    return render(request, 'infos/list.html', context)
+
 
 def detail_view(request, slug):
     news = get_object_or_404(News, slug=slug)
     context = {'news':news}
     return render(request, 'infos/news_detail.html', context)
 
-# def homePageView(request):
-#     news_list = News.published_news.all().order_by('-published')
-#     economic_list = News.economic_news.all().order_by('-published')[:2]
-#     politics_list = News.published_news.filter(category__name='Politics').order_by('-published')[:1]
-#     society_list = News.published_news.filter(category__name='Society').order_by('-published')[:1]
-#     categories = Category.objects.all()
-#     context = {'news_list':news_list,
-#                'economic_list':economic_list,
-#                'society_list':society_list,
-#                'politics_list':politics_list,
-#                'categories':categories}
-#     return render(request, 'infos/index.html', context)
-
-# def news_by_category(request, category_id):
-#     news_list = News.published_news.filter(category__id=category_id)
-#
-#     return render(request, 'infos/index.html', context)
 def news_by_category(request, category_id):
     categories = Category.objects.all()[:3]
 
@@ -61,20 +39,7 @@ def news_by_category(request, category_id):
 
     return render(request, 'infos/index.html', context)
 
-# class HomePageView(ListView):
-#     model = News
-#     template_name = 'infos/index.html'
-#     context_object_name = 'news_list'
-#
-#     def get_context_data(self, **kwargs):
-#         context = super(HomePageView, self).get_context_data(**kwargs)
-#         context['news_list'] = News.published_news.all().order_by('-published')
-#         context['economic_list'] = News.economic_news.all().order_by('-published')[:2]
-#         context['politics_list'] = News.published_news.filter(category__name='Politics').order_by('-published')
-#         context['society_list'] = News.published_news.filter(category__name='Society').order_by('-published')[:1]
-#         context['categories'] = Category.objects.all()
-#         context['foreign_news'] = News.objects.filter(category__name='Foreign').order_by('-published')
-#         return context
+
 
 class HomePageView(ListView):
     model = News
@@ -92,8 +57,6 @@ class HomePageView(ListView):
         context['featured_news_slider'] = latest_news[4:6]
         context['featured_news_left'] = latest_news[6:10]
         context['featured_news_right'] = latest_news[10:14]
-
-
         return context
 
 class ForeignNewsView(ListView):
@@ -124,17 +87,6 @@ class TechNewsView(ListView):
         return queryset
 
 
-
-
-
-# def contactPageView(request):
-#     form = ContactForm(request.POST or None)
-#     if form.is_valid() and request.method == 'POST':
-#         form.save()
-#         return HttpResponse("Thank you for contacting us.")
-#     context = {'form':form}
-#     return render(request, 'infos/contact.html', context)
-
 class ContactPageView(TemplateView):
     template_name = 'infos/contact.html'
 
@@ -149,5 +101,21 @@ class ContactPageView(TemplateView):
             return HttpResponse('Thank you for contacting me!')
         context = {'form':form}
         return render(request, self.template_name, context)
+
+class NewsUpdateView(UpdateView):
+    model = News
+    template_name = 'infos/crud/news_update.html'
+    fields = ['title', 'body', 'image', 'status', 'category']
+
+class NewsDeleteView(DeleteView):
+    model = News
+    template_name = 'infos/crud/news_delete.html'
+    success_url = reverse_lazy('home_page')
+
+class NewsCreateView(CreateView):
+    model = News
+    template_name = 'infos/crud/news_create.html'
+    fields = '__all__'
+
 
 
