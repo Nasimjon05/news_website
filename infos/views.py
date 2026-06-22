@@ -48,7 +48,7 @@ class HomePageView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        context['categories'] = Category.objects.all()
+        context['categories'] = Category.objects.all()[:3]
         context['foreign_news'] = News.objects.filter(category__name='Foreign')[:14]
 
         # default category on homepage
@@ -115,7 +115,8 @@ class NewsDeleteView(DeleteView):
 class NewsCreateView(CreateView):
     model = News
     template_name = 'infos/crud/news_create.html'
-    fields = '__all__'
+    fields = ['title', 'body', 'image', 'status', 'category']
+    success_url = reverse_lazy('home_page')
 
 
 

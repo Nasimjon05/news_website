@@ -1,6 +1,7 @@
 from django.urls import reverse
 from django.utils import timezone
 from django.db import models
+from django.utils.text import slugify
 from unicodedata import category
 
 
@@ -28,6 +29,11 @@ class News(models.Model):
     objects = models.Manager()
     published_news = Published()
     economic_news = Economic()
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super(News, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.title

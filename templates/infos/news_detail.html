@@ -43,6 +43,10 @@
 		   </li>
 		 </ul>
 		             <p class="mt-4">{{ news.body|linebreaks }}</p>
+                <div class="text-center">
+                    <a class="btn btn-danger" href="{% url 'delete' news.slug %}" >Delete</a>
+                    <a class="btn btn-warning" href="{% url 'update' news.slug %}" >Update</a>
+                </div>
 					  <ul class="mb-0 d-flex flex-wrap text-uppercase font_11 tags  mt-4">
 			 <li class="mx-1 mt-1 mb-1"><a class="d-block border p-1 px-2" href="#">lorem</a></li>	
 			 <li class="mx-1 mt-1 mb-1"><a class="d-block border p-1 px-2" href="#">porta</a></li>  

@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'infos/base.html' %}
+{% load static %}
+{% block content %}
 
-</body>
-</html>
+ <div class="container text-center m-3">
+     <form method="post" enctype="multipart/form-data">{% csrf_token %}
+         <h2 class="mb-2">Adding News</h2>
+         {{ form.as_p }}
+         <button class="btn btn-primary" type="submit">Add News</button>
+         <a href="{{ news.get_absolute_url  }}" class="btn btn-danger">
+    No, thanks
+</a>
+     </form>
+
+ </div>
+
+{% endblock content %}
