@@ -7,7 +7,7 @@
          <h2 class="mb-2">Adding News</h2>
          {{ form.as_p }}
          <button class="btn btn-primary" type="submit">Add News</button>
-         <a href="{{ news.get_absolute_url  }}" class="btn btn-danger">
+         <a href="{% url 'home_page'  %}" class="btn btn-danger">
     No, thanks
 </a>
      </form>

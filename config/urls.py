@@ -22,6 +22,7 @@ from config import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('news/', include('infos.urls')),
+    path('account/', include('accounts.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
